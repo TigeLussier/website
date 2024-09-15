@@ -1,0 +1,12 @@
+Interserver account:
+company
+
+Domain:
+
+www.tigelussier.com
+
+open FileZilla
+quickconnect
+
+
+
