@@ -1,0 +1,22 @@
+.nav-link {
+    color:black;
+}
+
+.nav {
+    height: 50px;
+    align-items: center;
+}
+
+.custom-carousel {
+    height: 500px;
+
+  }
+  
+  .custom-carousel .carousel-item img {
+    max-height: 500px;
+    max-width: 100%;;
+
+    object-fit: cover; /* Ensures the image covers the entire container */
+  }
+
+
