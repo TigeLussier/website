@@ -3,20 +3,38 @@
 }
 
 .nav {
-    height: 50px;
+    height: 80px;
     align-items: center;
 }
 
-.custom-carousel {
-    height: 500px;
+.carousel {
+  width: 100vw;
+  height: 800px; /* Set your fixed height here */
+  position: relative; /* Needed for the control buttons to be positioned relative to the carousel */
+}
 
-  }
-  
-  .custom-carousel .carousel-item img {
-    max-height: 500px;
-    max-width: 100%;;
+.carousel-inner {
+  height: 100%;
+}
 
-    object-fit: cover; /* Ensures the image covers the entire container */
-  }
+.carousel-item {
+  height: 100%;
+  /* background-color: #ffffff; /* Fallback background */
+  /* position: relative; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
 
+.carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover; /* Ensures cropping but maintains aspect ratio */
+}
 
+.carousel-control-prev, .carousel-control-next {
+  position: absolute; /* Ensure buttons are positioned relative to the carousel */
+  top: 50%; 
+  transform: translateY(-50%);
+  z-index: 1; /* Keeps the buttons above the images */
+}
