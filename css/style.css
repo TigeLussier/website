@@ -11,7 +11,6 @@
   width: 100vw;
   max-height: 750px; /* Set your fixed height here */
   position: relative; /* Needed for the control buttons to be positioned relative to the carousel */ 
-
 }
 
 .carousel-inner {
