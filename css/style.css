@@ -8,31 +8,12 @@
 }
 
 /*CAROUSEL*/
-
 .carousel {
   width: 100vw;
   overflow: hidden;
   position: relative; /* Needed for the control buttons to be positioned relative to the carousel */ 
 }
 
-.carousel-inner {
-  /* height: 100%; */
-}
-
-.carousel-item {
-  /* height: 100%; */
-  /* background-color: #ffffff; /* Fallback background */
-  /* position: relative; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-.carousel-item img {
-  /* max-height: 100%;
-  max-width: 100%;
-  object-fit: cover; /* Ensures cropping but maintains aspect ratio */
-}
 
 .carousel-control-prev, .carousel-control-next {
   position: absolute; /* Ensure buttons are positioned relative to the carousel */
@@ -42,7 +23,6 @@
 }
 
 /* INDEX CONTAINERS */
-
 .indexcontainer {
   display: flex;
   flex-direction: column;
