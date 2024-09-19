@@ -1,0 +1,29 @@
+.nav-link {
+    color:rgb(0, 0, 0);
+}
+
+.nav {
+    height: 80px;
+    align-items: center; 
+    width: 100%;    
+}
+
+.filmcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+
+.footercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    text-decoration: overline;
+    font-style: italic;
+  }
