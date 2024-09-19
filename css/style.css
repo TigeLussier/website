@@ -11,7 +11,6 @@
 
 .carousel {
   width: 100vw;
-   /* Set your fixed height here */
   overflow: hidden;
   position: relative; /* Needed for the control buttons to be positioned relative to the carousel */ 
 }
@@ -42,6 +41,8 @@
   z-index: 1; /* Keeps the buttons above the images */
 }
 
+/* INDEX CONTAINERS */
+
 .indexcontainer {
   display: flex;
   flex-direction: column;
@@ -57,5 +58,7 @@
   justify-content: center;
   width: 100vw;
   height: 100px;
+  text-decoration: overline;
+  font-style: italic;
 
 }
