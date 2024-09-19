@@ -3,7 +3,6 @@
 }
 
 .nav {
-    height: 80px;
     align-items: center;
 }
 
@@ -41,4 +40,16 @@
   text-decoration: overline;
   font-style: italic;
 
+}
+
+.headercontainer{
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.logo {
+  align-content: center;
+  padding-left: 1%;
+  
 }
