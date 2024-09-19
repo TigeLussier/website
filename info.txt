@@ -1,9 +1,17 @@
-Interserver account:
-company
+Plan: Web Hosting Direct Admin
+Domain: tigelussier.com
+IP Address: 205.209.104.35
 
-Domain:
+FTP INFORMATION:
+================
+FTP (SSL/TLS available): 205.209.104.35
+Username: tigeluss
+Password: 4v%J7hS#
 
-www.tigelussier.com
+NAMESERVER INFORMATION:
+=======================
+vda6900a.trouble-free.net
+vda6900b.trouble-free.net
 
 open FileZilla
 quickconnect
