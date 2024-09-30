@@ -3,9 +3,9 @@
 }
 
 .nav {
-    height: 80px;
-    align-items: center; 
-    width: 100%;    
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;    
 }
 
 .filmcontainer {
@@ -40,15 +40,30 @@ video {
     display: flex;
     height: 80px;
     justify-content: space-between;
+    align-items: center;
   }
   
   .logo {
     align-content: center;
     padding-left: 1%;
     margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     transition: opacity 0.3s; /* Add a smooth transition effect */
   }
   
   .logo:hover {
     opacity: 0.01; /* Change the image's opacity when hovered */
   }
+  
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .headercontainer {
+        height: 120px;
+        flex-direction: column;
+      }
+  
+      .logo {
+        margin-top: 5%;
+      }
+    }
