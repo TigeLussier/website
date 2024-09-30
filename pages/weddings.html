@@ -58,63 +58,91 @@
     <div class="gridcontainer">
         <div class="row">
             <div class="column">
-                <img src="../images/weddings/1.jpg">
-                <img src="../images/weddings/2.jpg">
-                <img src="../images/weddings/3.jpg">
-                <img src="../images/weddings/4.jpg">
-                <img src="../images/weddings/5.jpg">
-                <img src="../images/weddings/6.jpg">
-                <img src="../images/weddings/7.jpg">
-                <img src="../images/weddings/8.jpg">
-                <img src="../images/weddings/9.jpg">
-                <img src="../images/weddings/10.jpg">
-                <img src="../images/weddings/11.jpg">
-                <img src="../images/weddings/12.jpg">
-                <img src="../images/weddings/48.jpg">
-                <img src="../images/weddings/36.jpg">
-                <img src="../images/weddings/23.jpg">
-                <img src="../images/weddings/37.jpg">
-                <img src="../images/weddings/38.jpg">
-                <img src="../images/weddings/47.jpg">
-                <img src="../images/weddings/44.jpg">     
+                <img class="myImg" src="../images/weddings/1.jpg">
+                <img class="myImg" src="../images/weddings/2.jpg">
+                <img class="myImg" src="../images/weddings/3.jpg">
+                <img class="myImg" src="../images/weddings/4.jpg">
+                <img class="myImg" src="../images/weddings/5.jpg">
+                <img class="myImg" src="../images/weddings/6.jpg">
+                <img class="myImg" src="../images/weddings/7.jpg">
+                <img class="myImg" src="../images/weddings/8.jpg">
+                <img class="myImg" src="../images/weddings/9.jpg">
+                <img class="myImg" src="../images/weddings/10.jpg">
+                <img class="myImg" src="../images/weddings/11.jpg">
+                <img class="myImg" src="../images/weddings/12.jpg">
+                <img class="myImg" src="../images/weddings/48.jpg">
+                <img class="myImg" src="../images/weddings/36.jpg">
+                <img class="myImg" src="../images/weddings/23.jpg">
+                <img class="myImg" src="../images/weddings/37.jpg">
+                <img class="myImg" src="../images/weddings/38.jpg">
+                <img class="myImg" src="../images/weddings/47.jpg">
+                <img class="myImg" src="../images/weddings/44.jpg">     
             </div>
             <div class="column">
-                <img src="../images/weddings/13.jpg">
-                <img src="../images/weddings/14.jpg">
-                <img src="../images/weddings/15.jpg">
-                <img src="../images/weddings/16.jpg">
-                <img src="../images/weddings/17.jpg">
-                <img src="../images/weddings/18.jpg">
-                <img src="../images/weddings/19.jpg">
-                <img src="../images/weddings/20.jpg">
-                <img src="../images/weddings/21.jpg">
-                <img src="../images/weddings/22.jpg">
-                <img src="../images/weddings/41.jpg">
-                <img src="../images/weddings/42.jpg">
-                <img src="../images/weddings/43.jpg">
-                <img src="../images/weddings/46.jpg"> 
+                <img class="myImg" src="../images/weddings/13.jpg">
+                <img class="myImg" src="../images/weddings/14.jpg">
+                <img class="myImg" src="../images/weddings/15.jpg">
+                <img class="myImg" src="../images/weddings/16.jpg">
+                <img class="myImg" src="../images/weddings/17.jpg">
+                <img class="myImg" src="../images/weddings/18.jpg">
+                <img class="myImg" src="../images/weddings/19.jpg">
+                <img class="myImg" src="../images/weddings/20.jpg">
+                <img class="myImg" src="../images/weddings/21.jpg">
+                <img class="myImg" src="../images/weddings/22.jpg">
+                <img class="myImg" src="../images/weddings/41.jpg">
+                <img class="myImg" src="../images/weddings/42.jpg">
+                <img class="myImg" src="../images/weddings/43.jpg">
+                <img class="myImg" src="../images/weddings/46.jpg"> 
             </div>
             <div class="column">
-                <img src="../images/weddings/24.jpg"> 
-                <img src="../images/weddings/25.jpg">
-                <img src="../images/weddings/26.jpg">
-                <img src="../images/weddings/27.jpg">
-                <img src="../images/weddings/28.jpg">
-                <img src="../images/weddings/29.jpg">
-                <img src="../images/weddings/30.jpg">
-                <img src="../images/weddings/31.jpg">
-                <img src="../images/weddings/32.jpg">
-                <img src="../images/weddings/33.jpg">
-                <img src="../images/weddings/34.jpg">
-                <img src="../images/weddings/35.jpg">
-                <img src="../images/weddings/45.jpg">
-                <img src="../images/weddings/40.jpg">
-                <img src="../images/weddings/39.jpg"> 
-                
-                
+                <img class="myImg" src="../images/weddings/24.jpg"> 
+                <img class="myImg" src="../images/weddings/25.jpg">
+                <img class="myImg" src="../images/weddings/26.jpg">
+                <img class="myImg" src="../images/weddings/27.jpg">
+                <img class="myImg" src="../images/weddings/28.jpg">
+                <img class="myImg" src="../images/weddings/29.jpg">
+                <img class="myImg" src="../images/weddings/30.jpg">
+                <img class="myImg" src="../images/weddings/31.jpg">
+                <img class="myImg" src="../images/weddings/32.jpg">
+                <img class="myImg" src="../images/weddings/33.jpg">
+                <img class="myImg" src="../images/weddings/34.jpg">
+                <img class="myImg" src="../images/weddings/35.jpg">
+                <img class="myImg" src="../images/weddings/45.jpg">
+                <img class="myImg" src="../images/weddings/40.jpg">
+                <img class="myImg" src="../images/weddings/39.jpg"> 
             </div>
         </div>
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var images = document.getElementsByClassName("myImg");
+        
+        
+        // Loop through all images and attach onclick event to each
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+    </script>
     <div class="footercontainer">
         <p>Tige Lussier &copy; 2024</p>
     </div>

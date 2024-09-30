@@ -58,40 +58,69 @@
     <div class="gridcontainer">
         <div class="row">
             <div class="column">
-                <img src="../images/landscapes/1.jpeg">
-                <img src="../images/landscapes/2.jpeg">
-                <img src="../images/landscapes/3.jpeg">
-                <img src="../images/landscapes/4.jpeg">
-                <img src="../images/landscapes/5.jpeg">
-                <img src="../images/landscapes/6.jpeg">
-                <img src="../images/landscapes/25.jpeg">
-                <img src="../images/landscapes/20.jpeg">
-                <img src="../images/landscapes/21.jpeg">
+                <img class="myImg" src="../images/landscapes/1.jpeg">
+                <img class="myImg" src="../images/landscapes/2.jpeg">
+                <img class="myImg" src="../images/landscapes/3.jpeg">
+                <img class="myImg" src="../images/landscapes/4.jpeg">
+                <img class="myImg" src="../images/landscapes/5.jpeg">
+                <img class="myImg" src="../images/landscapes/6.jpeg">
+                <img class="myImg" src="../images/landscapes/25.jpeg">
+                <img class="myImg" src="../images/landscapes/20.jpeg">
+                <img class="myImg" src="../images/landscapes/21.jpeg">
             </div>
             <div class="column">
-                <img src="../images/landscapes/7.jpeg">
-                <img src="../images/landscapes/8.jpeg">
-                <img src="../images/landscapes/9.jpeg">
-                <img src="../images/landscapes/10.jpeg">
-                <img src="../images/landscapes/11.jpeg">
-                <img src="../images/landscapes/12.jpeg">
-                <img src="../images/landscapes/26.jpeg">
-                <img src="../images/landscapes/22.jpeg">
-                <img src="../images/landscapes/23.jpeg"> 
+                <img class="myImg" src="../images/landscapes/7.jpeg">
+                <img class="myImg" src="../images/landscapes/8.jpeg">
+                <img class="myImg" src="../images/landscapes/9.jpeg">
+                <img class="myImg" src="../images/landscapes/10.jpeg">
+                <img class="myImg" src="../images/landscapes/11.jpeg">
+                <img class="myImg" src="../images/landscapes/12.jpeg">
+                <img class="myImg" src="../images/landscapes/26.jpeg">
+                <img class="myImg"src="../images/landscapes/22.jpeg">
+                <img class="myImg"src="../images/landscapes/23.jpeg"> 
             </div>
             <div class="column">
-                
-                <img src="../images/landscapes/13.jpeg">
-                <img src="../images/landscapes/14.jpeg">
-                <img src="../images/landscapes/15.jpeg">
-                <img src="../images/landscapes/16.jpeg">
-                <img src="../images/landscapes/17.jpeg">
-                <img src="../images/landscapes/18.jpeg">
-                <img src="../images/landscapes/19.jpeg">
-                <img src="../images/landscapes/24.jpeg">
+                <img class="myImg" src="../images/landscapes/13.jpeg">
+                <img class="myImg" src="../images/landscapes/14.jpeg">
+                <img class="myImg" src="../images/landscapes/15.jpeg">
+                <img class="myImg" src="../images/landscapes/16.jpeg">
+                <img class="myImg" src="../images/landscapes/17.jpeg">
+                <img class="myImg" src="../images/landscapes/18.jpeg">
+                <img class="myImg" src="../images/landscapes/19.jpeg">
+                <img class="myImg" src="../images/landscapes/24.jpeg">
             </div>
         </div>
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var images = document.getElementsByClassName("myImg");
+        
+        
+        // Loop through all images and attach onclick event to each
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+    </script>
     <div class="footercontainer">
         <p>Tige Lussier &copy; 2024</p>
     </div>
