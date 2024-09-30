@@ -1,11 +1,11 @@
 .nav-link {
-    color:black;
+  color:black;
 }
 
 .nav {
-    align-items: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /*CAROUSEL*/
@@ -46,7 +46,7 @@
 
 .headercontainer{
   display: flex;
-  height: 80px;
+  height: 90px;
   justify-content: space-between;
   align-items: center;
 }
@@ -75,3 +75,5 @@
       margin-top: 5%;
     }
   }
+
+  
