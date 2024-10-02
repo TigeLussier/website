@@ -109,3 +109,26 @@
         margin-top: 5%;
       }
     }
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+}
+
+.text-overlay a {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.text-overlay a:hover {
+  font-style: normal;
+}
