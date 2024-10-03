@@ -87,8 +87,7 @@
   
   .logo {
     align-content: center;
-    padding-left: 1%;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 2%;
     margin-bottom: 2%;
     transition: opacity 0.3s; /* Add a smooth transition effect */
@@ -101,7 +100,7 @@
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 600px) {
       .headercontainer {
-        height: 120px;
+        height: 160px;
         flex-direction: column;
       }
   

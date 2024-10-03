@@ -46,8 +46,7 @@ video {
   
   .logo {
     align-content: center;
-    padding-left: 1%;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 2%;
     margin-bottom: 2%;
     transition: opacity 0.3s; /* Add a smooth transition effect */
@@ -60,21 +59,27 @@ video {
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 600px) {
       .headercontainer {
-        height: 120px;
+        height: 160px;
         flex-direction: column;
       }
   
       .logo {
         margin-top: 5%;
       }
+      .filmwriteup {
+        margin-top: 4%;
+        margin: 15px;
+        
+      }
+
     }
 
 .filmwriteup {
-display: flex;
-flex-direction: column;
-max-width: 600px;
-margin-top: 2%;
-margin-bottom: 2%;
-font-family: "Bree Serif", serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-family: "Bree Serif", serif;
 }
 
