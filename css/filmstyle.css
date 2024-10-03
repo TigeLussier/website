@@ -68,3 +68,13 @@ video {
         margin-top: 5%;
       }
     }
+
+.filmwriteup {
+display: flex;
+flex-direction: column;
+max-width: 600px;
+margin-top: 2%;
+margin-bottom: 2%;
+font-family: "Bree Serif", serif;
+}
+
