@@ -78,8 +78,8 @@ video {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin-top: 4%;
-  margin-bottom: 4%;
+  margin-top: 1%;
+  margin-bottom: 6%;
   font-family: "Bree Serif", serif;
 }
 
