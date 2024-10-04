@@ -113,6 +113,14 @@
       .logo {
         margin-top: 5%;
       }
+
+      .text-overlay {
+        margin-top: 150px;
+      }
+
+      .contactcontainer {
+        height: 200px;
+      }
     }
 
 .text-overlay {
