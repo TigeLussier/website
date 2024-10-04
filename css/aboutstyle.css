@@ -62,8 +62,14 @@
 
     }
     .aboutwords {
-        width:80vw;
+        width:70vw;
         padding-top: 5%;
+        margin-left: 3%;
+    }
+    .aboutimage {
+      margin-top: 5%;
+      justify-content: center;
+      padding-right: 0%;
     }
   }
 
