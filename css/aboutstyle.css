@@ -131,3 +131,18 @@
 .text-overlay a:hover {
   font-style: normal;
 }
+
+.contactcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:750px;
+  overflow: hidden;
+}
+
+
+.contactimage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
