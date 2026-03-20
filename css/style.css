@@ -16,6 +16,16 @@
   position: relative; /* Needed for the control buttons to be positioned relative to the carousel */ 
 }
 
+.carousel-inner {
+  max-height: calc(voovh - 90px);
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: calc(100vh - 90px);
+  object-fit: cover;
+}
+
 .carousel-control-prev, .carousel-control-next {
   position: absolute; /* Ensure buttons are positioned relative to the carousel */
   top: 50%; 
@@ -23,12 +33,75 @@
   z-index: 1; /* Keeps the buttons above the images */
 }
 
+/*CAROUSEL TEXT OVERLAY */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  width: 100%
+}
+
+.carousel-tagline {
+  color: #ffffff !important;
+font-family: "Bree Serif", serif;  font-weight: 900;
+  font-size: clamp(2.5rem, 3.5vw, 2rem);
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0 ,0.6);
+  margin-bottom: 0.04rem;
+  opacity: 0.8;
+}
+
+.carousel-links {
+  color: #ffffff !important;
+font-family: "Bree Serif", serif;  font-weight: 900;
+  font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+  letter-spacing: 0.15em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  margin: 0;
+  pointer-events: all;
+  opacity: 0.8;
+}
+
+/* More specific selector beats Bootstrap */
+.carousel-overlay .carousel-links a,
+.carousel-overlay .carousel-links a:hover,
+.carousel-overlay .carousel-links a:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.carousel-links a {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.carousel-links a:hover {
+  opacity: 0.5;
+  color: #ffffff !important;
+}
+
+.carousel-divider {
+  margin: 0 0.6rem;
+  opacity: 0.6;
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 600px) {
+  .carousel-overlay {
+    display: none;
+  }
+}
+
 /* INDEX CONTAINERS */
 .indexcontainer {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  max-height: 900px; /*Changed from 750 */
 }
 
 .footercontainer {

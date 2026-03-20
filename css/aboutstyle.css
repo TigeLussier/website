@@ -15,7 +15,8 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    height:750px;
+    min-height: calc(100vh - 90px); /* fills remaining viewport minus header */
+    width: 100vw;
 }
 
 .aboutimage {
@@ -58,7 +59,7 @@
   @media screen and (max-width: 800px) {
     .aboutcontainer {
       flex-direction: column;
-      height:auto;
+      min-height: calc(100vh - 90px);
 
     }
     .aboutwords {
@@ -147,16 +148,20 @@
 }
 
 .contactcontainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height:750px;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: calc(100vh - 90px); /* fixed typo from "voovh", matches header height */
+    position: relative;
 }
 
-
 .contactimage {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;               /* fill the container fully */
+    object-fit: cover;
 }
