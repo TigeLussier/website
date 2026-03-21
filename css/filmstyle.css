@@ -1,5 +1,46 @@
+/* ========== */
+/* GLOBAL     */
+/* ========== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== */
+/* HEADER     */
+/* ========== */
+
+.headercontainer {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  align-content: center;
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  transition: opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.01;
+}
+
+/* ========== */
+/* NAV        */
+/* ========== */
+
 .nav-link {
-    color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .nav {
@@ -9,77 +50,72 @@
   font-family: "Bree Serif", serif;
 }
 
+/* ========== */
+/* FILM PAGE  */
+/* ========== */
+
 .filmcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers videos */
+  padding-top: 2%;
+  height: auto;
 }
 
 video {
-    max-width: 800px; /* Adjust this value as needed */
-    width: 100%; /* Makes it responsive */
-    height: auto;
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-
-.footercontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    text-decoration: overline;
-    font-style: italic;
-  }
-
-  .headercontainer{
-    display: flex;
-    height: 90px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    align-content: center;
-    margin-left: 3%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    transition: opacity 0.3s; /* Add a smooth transition effect */
-  }
-  
-  .logo:hover {
-    opacity: 0.01; /* Change the image's opacity when hovered */
-  }
-  
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .headercontainer {
-        height: 160px;
-        flex-direction: column;
-      }
-  
-      .logo {
-        margin-top: 5%;
-      }
-      .filmwriteup {
-        margin-top: 4%;
-        margin: 15px;
-        
-      }
-
-    }
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  padding-top: 1%;
+}
 
 .filmwriteup {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin-top: 1%;
+  max-width: 680px;          /* slightly narrower than video */
+  width: 100%;
+  margin-top: 3%;
   margin-bottom: 6%;
   font-family: "Bree Serif", serif;
+  align-self: center;        /* keeps it centered within the container */
+  padding-left: 0;           /* left-aligns the text naturally */
 }
 
+/* ========== */
+/* FOOTER     */
+/* ========== */
+
+.footercontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  text-decoration: overline;
+  font-style: italic;
+}
+
+/* ========== */
+/* MOBILE     */
+/* ========== */
+
+@media screen and (max-width: 600px) {
+  .headercontainer {
+    height: 160px;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-top: 5%;
+  }
+
+  .filmcontainer {
+    align-items: center;     /* center on mobile */
+    padding-left: 0;
+  }
+
+  .filmwriteup {
+    margin: 15px;
+  }
+}
