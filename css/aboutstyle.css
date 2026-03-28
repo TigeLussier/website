@@ -1,36 +1,137 @@
 /* =========*/
+/* GLOBAL   */
+/* =========*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bree Serif", serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========*/
+/* HEADER   */
+/* =========*/
+
+.headercontainer {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    align-content: center;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    transition: opacity 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.01;
+}
+
+/* =========*/
 /* NAV      */
 /* =========*/
 
-.nav-link {
-    color:rgb(0, 0, 0);
-}
-
 .nav {
-  align-items: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  font-family: "Bree Serif", serif;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: "Bree Serif", serif;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
 }
 
 /* =========*/
-/* ABOUT.html   */
+/* FOOTER   */
 /* =========*/
 
+.footercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    text-decoration: overline;
+    font-style: italic;
+}
 
+/* =========*/
+/* CONTACT  */
+/* =========*/
+
+.contactcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative;
+}
+
+.contactimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========*/
+/* TEXT OVERLAY */
+/* =========*/
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(14px, 3vw, 24px); /* scales with viewport */
+    padding: 10px;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    width: 90%;                         /* prevents overflow on narrow screens */
+}
+
+.text-overlay a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: clamp(12px, 2.5vw, 18px); /* scales with viewport */
+}
+
+.text-overlay a:hover {
+    font-style: normal;
+}
+
+/* =========*/
+/* ABOUT    */
+/* =========*/
 
 .aboutcontainer {
     display: flex;
     flex-direction: row;
-    align-content: center;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 90px); /* fills remaining viewport minus header */
+    min-height: calc(100vh - 90px);
     width: 100%;
 }
 
 .aboutimage {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -41,14 +142,14 @@
 }
 
 .aboutwords {
-    display:flex;
+    display: flex;
     flex-direction: column;
     max-width: 500px;
     padding: 5%;
 }
 
 .centeremail {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -69,129 +170,51 @@
 /* MOBILE   */
 /* =========*/
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .aboutcontainer {
-      flex-direction: column;
-      min-height: calc(100vh - 90px);
+@media screen and (max-width: 800px) {
 
+    .headercontainer {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
     }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        gap: 4px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    .aboutcontainer {
+        flex-direction: column;
+        min-height: calc(100vh - 90px);
+    }
+
     .aboutwords {
-        width:70vw;
+        width: 70vw;
         padding-top: 5%;
         margin-left: 3%;
+        font-size: 10px;
     }
+
     .aboutimage {
-      margin-top: 5%;
-      justify-content: center;
-      padding-right: 0%;
-    }
-  }
-
-
-/* =========*/
-/* FOOTER   */
-/* =========*/
-
-
-.footercontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    text-decoration: overline;
-    font-style: italic;
-  }
-
-  
-/* =========*/
-/* HEADER   */
-/* =========*/
-
-  .headercontainer{
-    display: flex;
-    height: 90px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    align-content: center;
-    margin-left: 3%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    transition: opacity 0.3s; /* Add a smooth transition effect */
-  }
-  
-  .logo:hover {
-    opacity: 0.01; /* Change the image's opacity when hovered */
-  }
-  
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .headercontainer {
-        height: 160px;
-        flex-direction: column;
-      }
-  
-      .logo {
         margin-top: 5%;
-      }
-
-      .text-overlay {
-        margin-top: 150px;
-      }
-
-      .contactcontainer {
-        height: 200px;
-      }
+        justify-content: center;
+        padding-right: 0;
+        max-width: 230px;
     }
 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-  text-align: center;
-  font-family: "Bree Serif", serif;
-}
-
-.text-overlay a {
-  text-decoration: none;
-  color: white;
-  font-style: italic;
-  font-size: 18px;
-}
-
-.text-overlay a:hover {
-  font-style: normal;
-}
-
-/* =========*/
-/* CONTACT.html */
-/* =========*/
-
-
-.contactcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-    height: calc(100vh - 90px); /* fixed typo from "voovh", matches header height */
-    position: relative;
-}
-
-.contactimage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;               /* fill the container fully */
-    object-fit: cover;
+    .contactcontainer {
+        height: calc(100vh - 90px);
+    }
 }

@@ -82,19 +82,38 @@
   .logo:hover {
     opacity: 0.01; /* Change the image's opacity when hovered */
   }
-  
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .headercontainer {
-        height: 160px;
-        flex-direction: column;
-      }
-  
-      .logo {
-        margin-top: 5%;
-      }
-    }
 
+/* =========*/
+/* MOBILE    */
+/* =========*/
+
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .headercontainer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+}
 
 /*MODAL*/
 /* Style the Image Used to Trigger the Modal */

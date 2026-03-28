@@ -1,208 +1,191 @@
-/* ========== */
-/* Horizontal overflow fix: 2026-03-20*/
-/* ========== */
+/* =========*/
+/* GLOBAL   */
+/* =========*/
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bree Serif", serif;
 }
 
 body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
 
-/* ========== */
-/* NAV LINK   */
-/* =========  */
+/* =========*/
+/* HEADER   */
+/* =========*/
 
-.nav-link {
-  color:black;
-}
-
-.nav {
-  align-items: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  font-family: "Bree Serif", serif;
-}
-
-/* ========== */
-/*CAROUSEL*/
-/* ========== */
-
-.carousel {
-  width: 100%;
-  overflow: hidden;
-  position: relative; /* Needed for the control buttons to be positioned relative to the carousel */ 
-}
-
-.carousel-inner {
-  max-height: calc(voovh - 90px);
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: calc(100vh - 90px);
-  object-fit: cover;
-}
-
-.carousel-control-prev, .carousel-control-next {
-  position: absolute; /* Ensure buttons are positioned relative to the carousel */
-  top: 50%; 
-  transform: translateY(-50%);
-  z-index: 1; /* Keeps the buttons above the images */
-}
-
-/* ========== */
-/*CAROUSEL TEXT OVERLAY */
-/* ========== */
-
-.carousel-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  pointer-events: none;
-  width: 100%
-}
-
-.carousel-tagline {
-  color: #ffffff !important;
-font-family: "Bree Serif", serif;  font-weight: 900;
-  font-size: clamp(2.5rem, 3.5vw, 2rem);
-  letter-spacing: 0.03em;
-  text-shadow: 0 1px 6px rgba(0, 0, 0 ,0.6);
-  margin-bottom: 0.04rem;
-  opacity: 0.8;
-}
-
-.carousel-links {
-  color: #ffffff !important;
-font-family: "Bree Serif", serif;  font-weight: 900;
-  font-size: clamp(1.1rem, 3.5vw, 1.3rem);
-  letter-spacing: 0.15em;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-  margin: 0;
-  pointer-events: all;
-  opacity: 0.8;
-}
-
-/* More specific selector beats Bootstrap */
-.carousel-overlay .carousel-links a,
-.carousel-overlay .carousel-links a:hover,
-.carousel-overlay .carousel-links a:visited {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.carousel-links a {
-  color: #ffffff !important;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.carousel-links a:hover {
-  opacity: 0.5;
-  color: #ffffff !important;
-}
-
-.carousel-divider {
-  margin: 0 0.6rem;
-  opacity: 0.6;
-}
-
-/* Hide on mobile */
-@media screen and (max-width: 600px) {
-  .carousel-overlay {
-    display: none;
-  }
-}
-
-/* ========== */
-/* INDEX CONTAINERS */
-/* ========== */
-
-.indexcontainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.footercontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  text-decoration: overline;
-  font-style: italic;
-}
-
-.headercontainer{
-  display: flex;
-  height: 90px;
-  justify-content: space-between;
-  align-items: center;
+.headercontainer {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  display: flex;
-  align-content: center;
-  margin-left: 3%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  transition: opacity 0.3s; /* Add a smooth transition effect */
+    align-content: center;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    transition: opacity 0.3s;
 }
 
 .logo:hover {
-  opacity: 0.01; /* Change the image's opacity when hovered */
+    opacity: 0.01;
 }
 
+/* =========*/
+/* NAV      */
+/* =========*/
 
-/* MOBILE     */
-/* ========== */
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* ========== */
-
-@media screen and (max-width: 600px) {
-  .headercontainer {
-    /* height: 160px; */
-    display: none;
-    flex-direction: column; 
-  }
-  .logo {
-  margin-top: 10%;
-  }
-  .indexcontainer {
-  display: flex;
-  width: 100%; /* Fixes overflow issue */
-  }
-  .carousel {
-  width: 100%; /* Prevents horizontal overflow */
-  overflow: hidden;
-  position: relative; 
-  }
-  .footercontainer {
-    width: 100%; /* Fixes overflow issue */
-  }
-  .mobileindexcontainer {
-    display: flex !important;
-  }
-
-  
+.nav {
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: "Bree Serif", serif;
 }
 
-.mobileindexcontainer {
-  display: none;
-  flex-direction: column; 
-  height: 300px;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20%;
+.nav-link {
+    color: black;
 }
 
-  
+/* =========*/
+/* CAROUSEL */
+/* =========*/
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* =========*/
+/* CAROUSEL OVERLAY */
+/* =========*/
+
+.carousel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+    width: 90%;
+}
+
+.carousel-tagline {
+    color: #ffffff !important;
+    font-family: "Bree Serif", serif;
+    font-weight: 900;
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    letter-spacing: 0.03em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.4rem;
+    opacity: 0.8;
+}
+
+.carousel-links {
+    color: #ffffff !important;
+    font-family: "Bree Serif", serif;
+    font-weight: 900;
+    font-size: clamp(0.75rem, 2.5vw, 1.3rem);
+    letter-spacing: 0.15em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    pointer-events: all;
+    opacity: 0.8;
+}
+
+.carousel-overlay .carousel-links a,
+.carousel-overlay .carousel-links a:hover,
+.carousel-overlay .carousel-links a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.carousel-links a:hover {
+    opacity: 0.5;
+}
+
+.carousel-divider {
+    margin: 0 0.6rem;
+    opacity: 0.6;
+}
+
+/* =========*/
+/* FOOTER   */
+/* =========*/
+
+.footercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    text-decoration: overline;
+    font-style: italic;
+}
+
+/* =========*/
+/* MOBILE   */
+/* =========*/
+
+@media screen and (max-width: 800px) {
+
+    .headercontainer {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        gap: 4px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    .carousel-inner img {
+        height: 70vh;       /* shorter on mobile so it doesn't dominate */
+    }
+
+    .carousel-overlay {
+        width: 95%;
+    }
+
+    .carousel-tagline {
+        margin-bottom: 0.2rem;
+    }
+}

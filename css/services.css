@@ -53,6 +53,14 @@ body {
     transition: opacity 0.3s; /* Add a smooth transition effect */
   }
 
+  .logo:hover {
+    opacity: 0.01; /* Change the image's opacity when hovered */
+  }
+  
+
+
+
+
 /* =========*/
 /* MAIN CONTENT   */
 /* =========*/
@@ -61,7 +69,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 10px;
     border-radius: 4px;        /* subtle rounded corners */
     overflow: hidden;           /* keeps images clipped to the rounded edge */
 }
@@ -104,9 +112,23 @@ body {
 
 .servicesimage {
     width: 100%;
-    max-width: 350px;
-    flex-shrink: 0;             /* stops images squishing */
+    max-width: 450px;
+    flex-shrink: 0;  
+        /* stops images squishing */
 }
+/* S@ - wider image row variant */
+/*
+
+*/
+.stack-wide .servicesrow {
+    max-width: 1400px;
+    gap: 10px
+}
+
+.stack-wide .servicesimage {
+    max-width: 800px;
+}
+
 .servicesimagelandscape {
     display: flex;
     flex-direction: column;
@@ -120,6 +142,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+
 }
 
 .serviceswords {
@@ -206,24 +229,43 @@ body {
     font-style: italic;
   }
 
+/* =========*/
+/* MOBILE    */
+/* =========*/
+
 
   @media screen and (max-width: 800px) {
   .headercontainer {
-    /* height: 160px; */
-    display: none;
-    flex-direction: column; 
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
   }
   
   .servicesrow {
     flex-direction: column;
   }
+
   .servicesstack {
-        padding: 40px 15px;
-    }
+    padding: 40px 15px;
+  }
 
+   .logo {
+    margin: 10px 0;
+  }
 
-  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
 }
+
 
 
   
