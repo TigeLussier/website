@@ -115,6 +115,7 @@ body {
     max-width: 450px;
     flex-shrink: 0;  
         /* stops images squishing */
+    padding: 0px 10px;
 }
 /* S@ - wider image row variant */
 /*
