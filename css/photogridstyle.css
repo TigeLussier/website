@@ -122,7 +122,7 @@
   transition: 0.3s;
 }
 
-.myImg:hover {opacity: 0.7;}
+.myImg:hover {opacity: 1.0;}
 
 /* The Modal (background) */
 .modal {
@@ -143,8 +143,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 1000px;
+  width: 70%;
+  max-width: 800px;
   border-radius: 0%;
 }
 
