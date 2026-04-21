@@ -169,6 +169,79 @@ body {
 
 }
 
+/* =========*/
+/* SERVICE CTA CARDS */
+/* =========*/
+
+.services-cta-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+}
+
+.services-cta-card {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+  max-height: 220px;  /* ← add this */
+  overflow: hidden;
+  border-radius: 3px;
+  text-decoration: none;
+  display: block;
+}
+
+.services-cta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.65;
+  transition: opacity 0.35s ease;
+}
+
+.services-cta-card:hover img {
+  opacity: 1;
+}
+
+.services-cta-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.services-cta-overlay p {
+  color: #ffffff;
+  font-family: "Bree Serif", serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: 0.04em;
+  transition: opacity 0.35s ease;
+}
+
+/* Mobile: stack cards vertically */
+@media screen and (max-width: 800px) {
+  .services-cta-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-cta-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
 
 /* =========*/
 /* Offering cards   */
