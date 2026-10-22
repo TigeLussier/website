@@ -81,6 +81,12 @@ video {
   padding-left: 0;           /* left-aligns the text naturally */
 }
 
+/* ADDED Oct 22, 2026 to migrate videos to VIMEO */
+.filmcontainer .ratio {
+    max-width: 100%; /* adjust to match your video styling */
+}
+
+
 /* ========== */
 /* FOOTER     */
 /* ========== */
