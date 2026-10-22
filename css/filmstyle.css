@@ -83,7 +83,7 @@ video {
 
 /* ADDED Oct 22, 2026 to migrate videos to VIMEO */
 .filmcontainer .ratio {
-    max-width: 100%; /* adjust to match your video styling */
+    max-width: 70%; /* adjust to match your video styling */
 }
 
 
